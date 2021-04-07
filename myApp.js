@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.sendFile(absolutePath)
 });
 
+app.get("/json", (req, res) => {
+  res.json({"message": "Hello json"})
+});
+
 assetsPath = __dirname + '/public';
 
 app.use('/public', express.static(assetsPath));
